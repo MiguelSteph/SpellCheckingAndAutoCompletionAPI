@@ -1,22 +1,22 @@
 # Spell Checking And Auto Completion REST API
-In this project. I implement a REST API for the spell cheking and for word auto completion. 
+In this project. I have implemented a REST API for the spell cheking and for word auto completion. 
 This repository is created by Stephane Miguel. For any suggestion or questions, please feel free to contact me at Skakanakou@gmail.com
 
 # Implementation Details
 ## Data
-In this project, I use a text file that contains **479k English words**. Here is the link to the github repository that contains the data [**english-words**](https://github.com/dwyl/english-words). I use the alphabetical version [**words_alpha.txt**](https://github.com/dwyl/english-words/blob/master/words_alpha.txt)
+In this project, I have used a text file that contains **479k English words**. Here is the link to the github repository that contains the data [**english-words**](https://github.com/dwyl/english-words). I have used the alphabetical version [**words_alpha.txt**](https://github.com/dwyl/english-words/blob/master/words_alpha.txt)
 
 ## Data Structure
-I implement **26-Way Trie** to store efficiently the words and also to retrieve them efficiently. Here is the link to my implementation [**26-Way Trie**](https://github.com/MiguelSteph/SpellCheckingAndAutoCompletionAPI/blob/master/SpellCheckingAndAutoCompletion/src/main/java/com/spell/dao/RWayTrie.java)
+I have implemented **26-Way Trie** to store efficiently the words and also to retrieve them efficiently. Here is the link to my implementation [**26-Way Trie**](https://github.com/MiguelSteph/SpellCheckingAndAutoCompletionAPI/blob/master/SpellCheckingAndAutoCompletion/src/main/java/com/spell/dao/RWayTrie.java)
 
 ## REST API
-For the REST API implementation, I use **Jersey** and **Jackson** in order to provide **JSON** format response. 
+For the REST API implementation, I have used **Jersey** and **Jackson** in order to provide **JSON** format response. 
 
 # Endpoints of the REST API
-The REST API have the following endpoints : 
+The REST API has the following endpoints : 
 ## Spelling Checking
 The URI is  : **/restapi/spellingCheck/{word}** <br>
-This endpoint help to check if a word is well spelled or not. When the given word is not well spelled, the response suggests 10 words.
+This endpoint help to check whether a word is well spelled or not. When the given word is not well spelled, the response suggests 10 words.
 The response is formated as follow : 
 
 - when the query word is  "spelling" , the response is : 
