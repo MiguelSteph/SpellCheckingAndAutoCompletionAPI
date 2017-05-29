@@ -2,8 +2,10 @@ package com.spell.service;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 import com.spell.dao.IRWayTrie;
 import com.spell.dao.RWayTrie;
@@ -58,9 +60,9 @@ public class Service {
         ClassLoader classLoader = this.getClass().getClassLoader();
         File file = new File(classLoader.getResource("words_alpha.txt").getFile());
 
-        System.out.println(file.getAbsolutePath());
+        long startLoadingTime = System.currentTimeMillis();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"))) {
 
             String line;
             while ((line = reader.readLine()) != null) {
@@ -69,10 +71,13 @@ public class Service {
                     trie.put(line);
                 }
             }
-
+            long loadingTime = System.currentTimeMillis() - startLoadingTime;
+            System.out.println("loading time is " + loadingTime + " Millis");
+            
         } catch (IOException e) {
 
         }
+        
     }
 
     public String formalisationString(String query) {
@@ -80,7 +85,7 @@ public class Service {
             return null;
         query = query.toLowerCase();
         StringBuilder str = new StringBuilder();
-        int c;
+        char c;
         for (int i = 0; i < query.length(); i++) {
             c = query.charAt(i);
             if ((c >= 97) && (c <= 122)) {

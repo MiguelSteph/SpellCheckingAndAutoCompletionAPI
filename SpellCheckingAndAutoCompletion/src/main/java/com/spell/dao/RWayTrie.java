@@ -89,6 +89,7 @@ public class RWayTrie implements IRWayTrie {
         if (d == s.length())
             return d;
         int c = s.charAt(d);
+        c = c - 97;
         return longestPrefixOf(x.next[c], s, length, d + 1);
     }
 
