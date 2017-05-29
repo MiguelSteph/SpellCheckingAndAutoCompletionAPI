@@ -36,11 +36,11 @@ The response is formated as follow :
   "queryString": "algorithmm",
   "wellSpelled": false,
   "suggestion": [
-				    "algorithm",
-				    "algorithmic",
-				    "algorithmically",
-				    "algorithms"
-			    ]
+    "algorithm",
+    "algorithmic",
+    "algorithmically",
+    "algorithms"
+  ]
 }
 ```
 ## Word Auto Completion
@@ -54,20 +54,20 @@ The response is formated as follow :
 {
   "prefix": "sort",
   "propositions": [
-				    "sort",
-				    "sortable",
-				    "sortably",
-				    "sortal",
-				    "sortance",
-				    "sortation",
-				    "sorted",
-				    "sorter",
-				    "sorters",
-				    "sortes",
-				    "sorts",
-				    "sortwith",
-				    "sorty"
-				  ]
+    "sort",
+    "sortable",
+    "sortably",
+    "sortal",
+    "sortance",
+    "sortation",
+    "sorted",
+    "sorter",
+    "sorters",
+    "sortes",
+    "sorts",
+    "sortwith",
+    "sorty"
+  ]
 }
 ```
 
