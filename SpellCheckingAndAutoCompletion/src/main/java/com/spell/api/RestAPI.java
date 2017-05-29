@@ -46,7 +46,7 @@ public class RestAPI {
         }
         return service.autoCompletion(query);
     }
-    
+     
     @GET
     @Path("/longestPrefixWord/{queryString}")
     @Produces(MediaType.APPLICATION_JSON)
